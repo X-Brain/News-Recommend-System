@@ -3,14 +3,16 @@
 '''
 def TransforData():
     
-     fr = open('/Users/hakuri/Desktop/data_set.txt')
-     f=open('/Users/hakuri/Desktop/train_set.txt','w')
+     fr = open('/Users/hakuri/Desktop/train_date_set.txt')
+     f=open('/Users/hakuri/Desktop/train_date_set1.txt','w')
      for line in fr.readlines():
         # line.strip().split('\t')
-         tab='\t'
-         line_change=line.strip().split('\t')[0]+tab+line.strip().split('\t')[1]+tab+line.strip().split('\t')[2]+tab+line.strip().split('\t')[3]+tab+line.strip().split('\t')[5]
-         print line_change
-         f.write(line_change+'\n')
-         
+         t= line.strip().split('\t')[4]
+         if line.strip().split('\t')[4][0]=='0':
+               t=line.strip().split('\t')[4][1]
+              
+         f.write( line.strip().split('\t')[0]+'\t' +line.strip().split('\t')[1]+'\t' + line.strip().split('\t')[2] +'\t' +line.strip().split('\t')[3] +'\t' +t+'\n')     
+        
+        
 if __name__=='__main__':
     TransforData()
