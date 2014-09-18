@@ -25,7 +25,7 @@ def Find_Null():
         list.remove(i)
     
     for k, v in dic.iteritems():
-        if v>30:
+        if v>80:
             v_list.append(k)
             
 #             f.write(k+'\n')
