@@ -3,8 +3,8 @@
 '''
 def TransforData():
     
-     fr = open('/Users/hakuri/Desktop/train_date_set.txt')
-     f=open('/Users/hakuri/Desktop/train_date_set1.txt','w')
+     fr = open('/Users/hakuri/Desktop/train_lastday_set.txt')
+     f=open('/Users/hakuri/Desktop/train_lastday_set1.txt','w')
      for line in fr.readlines():
         # line.strip().split('\t')
          t= line.strip().split('\t')[4]
