@@ -1,5 +1,6 @@
 import jieba.analyse
-#!coding=utf-8
+
+
 def Get_keywords(day):
     fr = open('/Users/hakuri/Desktop/test/train_date_set1/train_date_set1_%d.txt'%day)
     f1=open('/Users/hakuri/Desktop/test/key_words/keywords_%d.txt'%day,'w')
