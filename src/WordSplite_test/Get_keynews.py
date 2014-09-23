@@ -6,6 +6,7 @@ def Get_keynews(day):
     list_key=[]
     dic={}
     dic_no_repeat={}
+    num=0
     for line in fr.readlines():
         print line
         for i in range(0,5) :
@@ -28,13 +29,17 @@ def Get_keynews(day):
         for k,v in dic.iteritems():
             if k in line.strip().split('\t')[3]:                
                 for i in v:
-                    dic_no_repeat[line.strip().split('\t')[0]].append(i)
+                    if int(i)!=int(line.strip().split('\t')[1]):
+                     dic_no_repeat[line.strip().split('\t')[0]].append(i)
         dic_no_repeat[line.strip().split('\t')[0]]= list(set(dic_no_repeat[line.strip().split('\t')[0]]))       
 #                     print line.strip().split('\t')[0]+'\t'+i
     print     dic_no_repeat     
+    
     for k1,v1 in  dic_no_repeat.iteritems():
         if v1:
             for m in v1:
-              f.write(k1+'\t'+m+'\n')    
+              f.write(k1+'\t'+m+'\n')  
+              num=num+1
+    print num             
 
 # Get_keynews()
