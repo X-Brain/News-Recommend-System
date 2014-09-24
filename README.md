@@ -20,3 +20,6 @@ News-Recommend-System
 #####5. Delete_Repeat.Delete_Repeat()函数，去除result中的重复项，生成test/result_no_repeat.txt
    
 #####6.Get_hot_result.get_hot_result(Global_param.hot_rate)函数，因为上面生成result_no_repeat函数可能出现，每个用户推荐过多的情况，影响准确率。所以用这个函数控制数量，每个用户只推荐新闻热度相对高的候选项。最终结果集test/result_no_repeat_hot.txt
+
+
+##详情可见：http://blog.csdn.net/buptgshengod
