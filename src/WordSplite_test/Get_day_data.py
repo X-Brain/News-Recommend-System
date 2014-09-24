@@ -1,7 +1,9 @@
+import Global_param
+#coding=utf-8  
 def TransforData(day):
     
-     fr = open('/Users/hakuri/Desktop/test/train_lastday_set1.txt')
-     f=open('/Users/hakuri/Desktop/test/train_lastday_set/train_lastday_set1_%d.txt'%day,'w')
+     fr = open(Global_param.test_root+'test/train_lastday_set1.txt')
+     f=open(Global_param.test_root+'test/train_lastday_set/train_lastday_set1_%d.txt'%day,'w')
      for line in fr.readlines():
         # line.strip().split('\t')
          t= line.strip().split('\t')[4]
@@ -10,8 +12,8 @@ def TransforData(day):
         
 def TransforDataset(day):
     
-     fr = open('/Users/hakuri/Desktop/test/train_date_set1.txt')
-     f=open('/Users/hakuri/Desktop/test/train_date_set1/train_date_set1_%d.txt'%day,'w')
+     fr = open(Global_param.test_root+'test/train_date_set1.txt')
+     f=open(Global_param.test_root+'test/train_date_set1/train_date_set1_%d.txt'%day,'w')
      for line in fr.readlines():
         # line.strip().split('\t')
          t= line.strip().split('\t')[4]

@@ -1,4 +1,4 @@
-
+import Global_param
 def count_line():
    f=open('/Users/hakuri/Desktop/test/result_no_repeat_hot.txt')
    i=0

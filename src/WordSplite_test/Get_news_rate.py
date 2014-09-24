@@ -1,6 +1,8 @@
+import Global_param
+#coding=utf-8  
 def get_news_rate():
-     fr = open('/Users/hakuri/Desktop/test/train_date_set1.txt')
-     fr1=open('/Users/hakuri/Desktop/test/train_date_set1.txt')
+     fr = open(Global_param.train_set)
+     fr1=open(Global_param.train_set)
      news_list=[]
      news_dic={}
      for line in fr.readlines():
@@ -14,7 +16,8 @@ def get_news_rate():
 #      print news_list
      for line in fr1.readlines():
          news_dic[line.strip().split('\t')[1]]+=1
-     print news_dic
+#      print news_dic
+     print "Get_news_rate 计算新闻出现的热度"
      return news_dic
      
 get_news_rate()

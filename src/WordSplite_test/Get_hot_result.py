@@ -1,9 +1,10 @@
 import Get_news_rate
 import print_list_dic
-#top :the hostest top news
+import Global_param
+#coding=utf-8  
 def get_hot_result(top):
-    f=open('/Users/hakuri/Desktop/test/result_no_repeat.txt')
-    f1=open('/Users/hakuri/Desktop/test/result_no_repeat.txt')
+    f=open(Global_param.test_root+'test/result_no_repeat.txt')
+    f1=open(Global_param.test_root+'test/result_no_repeat.txt')
     news_dic=Get_news_rate.get_news_rate()
     print news_dic
     user_list=[]
@@ -17,7 +18,7 @@ def get_hot_result(top):
 #     print dic
     for line in f1.readlines():
         dic[line.strip().split('\t')[0]].append(line.strip().split('\t')[1])
-    print dic
+    
     for k,v in dic.iteritems():
       
         if len(v)>3:
@@ -32,9 +33,7 @@ def get_hot_result(top):
             v= temp_list   
             
         dic[k]=v  
-        
-             
-    print_list_dic.print_dic(dic)                
-        
-    print dic
+#coding=utf-8                   
+    print 'Get_hot_result finished'
+    print_list_dic.print_dic(dic)
 # get_hot_result(1)

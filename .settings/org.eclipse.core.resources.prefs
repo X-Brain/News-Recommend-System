@@ -1,4 +1,8 @@
 eclipse.preferences.version=1
 encoding//src/HandleData.py=UTF-8
+encoding//src/WordSplite_test/Delete_Repeat.py=utf-8
+encoding//src/WordSplite_test/Get_day_data.py=utf-8
+encoding//src/WordSplite_test/Get_keynews.py=utf-8
 encoding//src/WordSplite_test/Get_keywords.py=utf-8
+encoding//src/WordSplite_test/Get_news_rate.py=utf-8
 encoding/<project>=UTF-8

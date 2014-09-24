@@ -1,8 +1,10 @@
+import Global_param
+#coding=utf-8  
 def Get_keynews(day):
-    fr = open('/Users/hakuri/Desktop/test/key_words/keywords_%d.txt'%day)
-    fr1 = open('/Users/hakuri/Desktop/test/train_date_set1/train_date_set1_%d.txt'%day)
-    fr2=open('/Users/hakuri/Desktop/test/train_lastday_set/train_lastday_set1_%d.txt'%day)
-    f=open('/Users/hakuri/Desktop/test/result.txt','a')
+    fr = open(Global_param.test_root+'test/key_words/keywords_%d.txt'%day)
+    fr1 = open(Global_param.test_root+'test/train_date_set1/train_date_set1_%d.txt'%day)
+    fr2=open(Global_param.test_root+'test/train_lastday_set/train_lastday_set1_%d.txt'%day)
+    f=open(Global_param.test_root+'test/result.txt','a')
     list_key=[]
     dic={}
     dic_no_repeat={}
@@ -22,7 +24,7 @@ def Get_keynews(day):
     for k,v in dic.iteritems():
          dic[k]=list(set(v))
                     
-    print dic
+    
     for line in fr2.readlines():
         list1=[]
         dic_no_repeat[line.strip().split('\t')[0]]=list1
@@ -33,13 +35,13 @@ def Get_keynews(day):
                      dic_no_repeat[line.strip().split('\t')[0]].append(i)
         dic_no_repeat[line.strip().split('\t')[0]]= list(set(dic_no_repeat[line.strip().split('\t')[0]]))       
 #                     print line.strip().split('\t')[0]+'\t'+i
-    print     dic_no_repeat     
+    print "Get_keynews 获得与最后一次浏览相关的新闻"  
     
     for k1,v1 in  dic_no_repeat.iteritems():
         if v1:
             for m in v1:
               f.write(k1+'\t'+m+'\n')  
               num=num+1
-    print num             
+             
 
 # Get_keynews()
