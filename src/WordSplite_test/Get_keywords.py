@@ -7,7 +7,7 @@ def Get_keywords(day):
     txt=''
     for line in fr.readlines():
           txt=txt+line.strip().split('\t')[3]+','
-    t= jieba.analyse.extract_tags(txt,5)   
+    t= jieba.analyse.extract_tags(txt,10)   
     for i in t:
        f1.write(i+'\t')
     

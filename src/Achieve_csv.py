@@ -1,7 +1,7 @@
 import csv
 
 def Achieve_csv():
-    fr = open('/Users/hakuri/Desktop/result.txt')
+    fr = open('/Users/hakuri/Desktop/result_no_repeat_hot.txt')
     csvf=open('/Users/hakuri/Desktop/test.csv','wb')
     writer=csv.writer(csvf)
     i=0
