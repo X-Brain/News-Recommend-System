@@ -11,7 +11,7 @@ def Get_keynews(day):
     num=0
     for line in fr.readlines():
         print line
-        for i in range(0,5) :
+        for i in range(0,Global_param.number_jieba) :
           list_key.append(line.strip().split('\t')[i])
    
     for m in list_key:     

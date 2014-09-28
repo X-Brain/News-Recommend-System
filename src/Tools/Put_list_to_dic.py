@@ -1,5 +1,5 @@
 import Find_Top
-def   list_to_dic():
+def  list_to_dic():
      fr = open('/Users/hakuri/Desktop/train_date_set1.txt')
      fr1=open('/Users/hakuri/Desktop/train_lastday_set1.txt')
      f=open('/Users/hakuri/Desktop/lastday_fit_hot_6.txt','w')

@@ -2,7 +2,7 @@ import Global_param
 #coding=utf-8  
 def TransforData(day):
     
-     fr = open(Global_param.test_root+'test/train_lastday_set1.txt')
+     fr = open(Global_param.test_root+'test/train_lastdat_set1.txt')
      f=open(Global_param.test_root+'test/train_lastday_set/train_lastday_set1_%d.txt'%day,'w')
      for line in fr.readlines():
         # line.strip().split('\t')
