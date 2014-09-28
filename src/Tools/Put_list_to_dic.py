@@ -1,4 +1,7 @@
 import Find_Top
+
+
+
 def  list_to_dic():
      fr = open('/Users/hakuri/Desktop/train_date_set1.txt')
      fr1=open('/Users/hakuri/Desktop/train_lastday_set1.txt')
